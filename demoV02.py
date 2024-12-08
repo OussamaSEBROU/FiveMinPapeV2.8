@@ -351,7 +351,7 @@ def main():
         response_placeholder = st.empty()
         with st.spinner("Generating Insights..."):
             try:
-                model = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0.7)
+                model = ChatGoogleGenerativeAI(model="gemini-exp-1206", temperature=0.7)
 
                 prompt_template = """
                 You are an advanced document analysis and interaction AI your name is forever 5minPaper AI, Your responses are based solely on the provided text.
@@ -372,7 +372,7 @@ def main():
                 5. If the user has not asked for a translation yet, your answer should be in the same language as the question written.
                 6. Use professional mathematical and scientific notation.
                 7. Mathematical and Scientific Notation: For any mathematical formulas, scientific symbols, or code snippets, present them like professional LaTeX font formatting for professional and accurate representation.
-                8. Output Length: Your response should ideally be around 1500 tokens or more. 
+                8. Output Length: Your response should ideally be around 1000 tokens or more. 
                 """
 
                 prompt = PromptTemplate(
